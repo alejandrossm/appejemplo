@@ -8,7 +8,6 @@ import { Pag4PageRoutingModule } from './pag4-routing.module';
 
 import { Pag4Page } from './pag4.page';
 import { ComponentsModule } from '../../components/components.module';
-import { AppRoutingModule } from '../../app-routing.module';
 
 @NgModule({
   imports: [

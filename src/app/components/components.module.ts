@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { HeaderComponent } from './header/header.component';
+
 import { PieComponent } from './pie/pie.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
 
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, PieComponent],
-  exports:[HeaderComponent, PieComponent],
+  declarations: [EncabezadoComponent, PieComponent],
+  exports:[EncabezadoComponent, PieComponent],
   imports: [
     CommonModule,
     IonicModule,
