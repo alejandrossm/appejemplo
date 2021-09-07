@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Pag2Page implements OnInit {
 
+
+  personas=[{
+    nombre:"Wacoldo",
+    apellido:"Soto",
+    srcimagen: "../assets/images/personita.jpg"
+  },
+  {
+  nombre:"Diogenes",
+  apellido:"Carrasco",
+  srcimagen: "../assets/images/personita.jpg"
+  },
+  {
+    nombre:"Wenceslao",
+    apellido:"Vargas",
+    srcimagen: "../assets/images/personita.jpg"
+  },
+]
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
