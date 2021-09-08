@@ -1,46 +1,3 @@
-<ion-menu side="start" menuId="first" contentId="main">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-<ion-menu-toggle>
-
-
-    <ion-list lines="full" *ngFor="let item of menuitems" >
-
-      <ion-item [routerLink]="item.destino" detail>
-        <ion-label color="primary">{{item.texto}}</ion-label>
-        <ion-icon slot="start" [name]="item.icono" color="primary"></ion-icon>
-      </ion-item>
-      
-      <!-- <ion-item routerLink="home" detail>
-        <ion-label color="primary">Home</ion-label>
-        <ion-icon slot="start" name="home" color="primary"></ion-icon>
-      </ion-item>
-
-      <ion-item routerLink="pag2">
-        <ion-label>Listar</ion-label>
-        <ion-icon slot="start" name="list"></ion-icon>
-      </ion-item>
-
-      <ion-item routerLink="pag3">
-        <ion-label>Información Personal</ion-label>
-        <ion-icon slot="start" name="person"></ion-icon>
-      </ion-item>
-
-      <ion-item routerLink="pag4">
-        <ion-label>Alerta</ion-label>
-        <ion-icon slot="start" name="alert-circle"></ion-icon>
-      </ion-item> -->
-
-    </ion-list>
-  </ion-menu-toggle>
-  </ion-content>
-</ion-menu>
-
 <ion-app>
 
   <ion-menu side="start" menuId="first" contentId="main" mode="ios">
@@ -53,39 +10,14 @@
     <ion-content>
       <ion-menu-toggle>
         <ion-list *ngFor="let item of opciones" lines="none">
-        <ion-item [routerLink]="item.link" detail>
-          <ion-icon slot="start" [name]="item.icono" color="dark"></ion-icon>
+          <ion-item [routerLink]="item.link" detail>
+            <ion-icon slot="start" [name]="item.icono" color="dark"></ion-icon>
             {{item.texto}}
-        </ion-item>
-        
-         <!--  <ion-item routerLink="home" detail color="secondary">
-            <ion-icon slot="start" name="home"></ion-icon>
-            Home
           </ion-item>
-
-          <ion-item routerLink="pag2" detail>
-            <ion-icon slot="start" name="List" color="primary"></ion-icon>
-            <ion-label color="primary">Listas</ion-label>
-          </ion-item>
-
-          <ion-item routerLink="pag3" detail>
-            <ion-icon slot="start" name="person"></ion-icon>
-            Personal
-          </ion-item>
-
-          <ion-item routerLink="pag4" detail>
-            <ion-icon slot="start" name="warning"></ion-icon>
-            Alertas
-          </ion-item> -->
-
         </ion-list>
       </ion-menu-toggle>
     </ion-content>
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title>Footer del menu</ion-title>
-      </ion-toolbar>
-    </ion-footer>
+    
   </ion-menu>
 
 
