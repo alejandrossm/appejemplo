@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 
@@ -10,60 +9,36 @@ import { AlertController } from '@ionic/angular';
 })
 export class Pag4Page implements OnInit {
 
-  constructor(private alertController:AlertController, private router:Router ) { }
-  
+  constructor(private alertController:AlertController) { }
+
   ngOnInit() {
   }
 
   async presentAlert() {
     const alert = await this.alertController.create({
-      header: 'Alerta',
-      subHeader: 'Prueba de alerta',
-      message: 'Está muy bakan!!!',
-      buttons: ['OK']
-    });
-
-    await alert.present();
-
-    const { role } = await alert.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
-  }
-
-  async presentAlertMultipleButtons() {
-    const alert = await this.alertController.create({
-      header: 'Alert',
-      subHeader: 'Subtitle',
-      message: 'This is an alert message.',
-      buttons: ['Cancel', 'Open Modal', 'Delete']
-    });
-
-    await alert.present();
-  }
-
-  async presentAlertConfirm() {
-    const alert = await this.alertController.create({
-     
-      header: 'Confirm!',
-      message: 'Message <strong>text</strong>!!!',
+      header: 'Alerta Simple',
+      subHeader: 'Ejemplo de Alerta',
+      message: 'Este es el mensaje de la alerta',
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
-          cssClass: 'secondary',
+          cssClass: 'danger',
           handler: (blah) => {
             console.log('Confirm Cancel: blah');
           }
         }, {
-          text: 'ir a listas',
+          text: 'Okay',
           handler: () => {
-            this.router.navigateByUrl('pag2');
+            console.log('Confirm Okay');
           }
         }
       ]
     });
 
     await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log('Este mensaje de acá', role);
   }
-
-
 }

@@ -1,14 +1,15 @@
-<app-encabezado titulo="Alerta" icono="alert-circle"></app-encabezado>
+<app-encabezado titulo="Alertas" icono="warning"></app-encabezado>
+
 
 <ion-content class="ion-padding">
-  <ion-button (click)="presentAlert()" expand="block">
-    Alerta
+  <ion-button  expand="block" (click)="presentAlert()" >
+    Mostrar Alerta
   </ion-button>
-  <ion-button (click)=" presentAlertMultipleButtons()" expand="block">
-    Alerta 2
-  </ion-button>
-  <ion-button (click)="presentAlertConfirm()" expand="block">
-    Alerta con promesa
-  </ion-button>
+
+
+
 </ion-content>
-<app-pie></app-pie>
+
+
+
+<app-footer></app-footer>

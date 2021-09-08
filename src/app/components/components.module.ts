@@ -4,13 +4,16 @@ import { IonicModule } from '@ionic/angular';
 
 import { PieComponent } from './pie/pie.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 
 @NgModule({
-  declarations: [EncabezadoComponent, PieComponent],
-  exports:[EncabezadoComponent, PieComponent],
+  declarations: [EncabezadoComponent,FooterComponent],
+  exports:[EncabezadoComponent,
+    FooterComponent,  
+  ],
   imports: [
     CommonModule,
     IonicModule,

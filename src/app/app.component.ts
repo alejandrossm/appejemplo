@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Menuitem } from './interfaces/menuitem';
+import { Opmenu } from './interfaces/opmenu';
 
 @Component({
   selector: 'app-root',
@@ -7,29 +7,33 @@ import { Menuitem } from './interfaces/menuitem';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  
-  menuitems:Menuitem[]=[
+
+  opciones:Opmenu[]=[
     {
-      icono:"home",
-      destino:"home",
-      texto:"home"
+      link:"home",
+      texto:"home",
+      icono:"home"
     },
     {
-      icono:"list",
-      destino:"pag2",
-      texto:"Item List"
+      link:"pag2",
+      texto:"Listas",
+      icono:"list"
     },
     {
-      icono:"person",
-      destino:"pag3",
-      texto:"Personal"
+      link:"pag3",
+      texto:"Personal",
+      icono:"person"
     },
     {
-      icono:"alert-circle",
-      destino:"pag4",
-      texto:"Alertas"
+      link:"pag4",
+      texto:"Alertas",
+      icono:"warning"
+    },
+    {
+      link:"pag4",
+      texto:"otra página",
+      icono:"flash"
     }
-  ];
-  
+  ]
   constructor() {}
 }
